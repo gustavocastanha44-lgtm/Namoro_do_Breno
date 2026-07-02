@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Amor Eterno | Feliz Aniversário</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=DM+Sans:wght@400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#70585b",
+                        "secondary-fixed": "#ffe088",
+                        "on-tertiary-container": "#646461",
+                        "secondary-container": "#fed65b",
+                        "surface-variant": "#e9e1de",
+                        "on-error-container": "#93000a",
+                        "outline-variant": "#d2c3c4",
+                        "outline": "#807475",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#5e5e5c",
+                        "surface-tint": "#70585b",
+                        "on-tertiary-fixed-variant": "#474744",
+                        "inverse-on-surface": "#f8efec",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#241a00",
+                        "tertiary-container": "#e3e1dd",
+                        "surface-dim": "#e1d8d5",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#fff8f6",
+                        "inverse-primary": "#debfc2",
+                        "on-background": "#1e1b19",
+                        "background": "#fff8f6",
+                        "on-secondary-container": "#745c00",
+                        "inverse-surface": "#342f2e",
+                        "on-surface": "#1e1b19",
+                        "on-primary-container": "#765e61",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#efe6e3",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#debfc2",
+                        "on-tertiary-fixed": "#1b1c1a",
+                        "tertiary-fixed-dim": "#c8c6c3",
+                        "tertiary-fixed": "#e4e2de",
+                        "surface-container-highest": "#e9e1de",
+                        "on-secondary-fixed-variant": "#574500",
+                        "on-surface-variant": "#4f4445",
+                        "secondary-fixed-dim": "#e9c349",
+                        "primary-fixed": "#fbdbde",
+                        "on-primary-fixed-variant": "#574144",
+                        "surface-container": "#f5ece9",
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#fff8f6",
+                        "surface-container-low": "#fbf2ef",
+                        "on-primary-fixed": "#281719",
+                        "secondary": "#735c00",
+                        "primary-container": "#fadadd"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "section-gap": "120px",
+                        "unit": "8px",
+                        "container-max": "1140px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Playfair Display"],
+                        "label-caps": ["DM Sans"],
+                        "headline-sm": ["Playfair Display"],
+                        "body-md": ["DM Sans"],
+                        "body-lg": ["DM Sans"],
+                        "display-lg": ["Playfair Display"],
+                        "display-lg-mobile": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "500" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .heart-float {
+            position: absolute;
+            pointer-events: none;
+            animation: float-up linear infinite;
+            opacity: 0;
+        }
+
+        @keyframes float-up {
+            0% {
+                transform: translateY(0) scale(0.5);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0.6;
+            }
+
+            80% {
+                opacity: 0.6;
+            }
+
+            100% {
+                transform: translateY(-100vh) scale(1.2);
+                opacity: 0;
+            }
+        }
+
+        .letter-paper {
+            background-image: radial-gradient(#d2c3c4 0.5px, transparent 0.5px);
+            background-size: 20px 20px;
+        }
+
+        .gold-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #ffe088, transparent);
+        }
+
+        .reveal-btn:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-container selection:text-primary">
+    <!-- TopNavBar -->
+    <nav
+        class="bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md fixed top-0 w-full z-50 shadow-[0_4px_30px_rgba(74,69,67,0.04)]">
+        <div class="flex justify-between items-center px-margin-mobile md:px-gutter py-4 max-w-container-max mx-auto">
+            <span class="text-headline-sm font-headline-sm text-primary dark:text-primary-fixed-dim tracking-tight">Uma
+                Vida Contigo</span>
+            <div class="hidden md:flex gap-gutter items-center">
+                <a class="text-on-surface-variant dark:text-on-surface hover:text-primary transition-colors duration-300 text-label-caps font-label-caps uppercase"
+                    href="#mensagem">Mensagem</a>
+                <a class="text-on-surface-variant dark:text-on-surface hover:text-primary transition-colors duration-300 text-label-caps font-label-caps uppercase"
+                    href="#playlist">Playlist</a>
+                <a class="bg-primary text-on-primary px-6 py-2 rounded-full text-label-caps font-label-caps hover:scale-105 transition-transform duration-300"
+                    href="#surpresa">Surpresa</a>
+            </div>
+            <div class="md:hidden">
+                <span class="material-symbols-outlined text-primary">menu</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="w-full h-full bg-cover bg-center transition-transform duration-[10s] hover:scale-110"
+                data-alt="A cinematic, high-end editorial photograph of a romantic couple embracing softly during the golden hour on a serene beach."
+                style="background-image: url('fotos/Breno_hero.jpeg')">
+            </div>
+            <div class="absolute inset-0 bg-black/20 backdrop-brightness-90"></div>
+        </div>
+        <!-- Floating Hearts Canvas -->
+        <div class="absolute inset-0 pointer-events-none" id="heart-container"></div>
+        <div class="relative z-10 text-center px-margin-mobile">
+            <h1 class="text-display-lg-mobile md:text-display-lg font-display-lg text-white mb-4 drop-shadow-lg">Feliz
+                Aniversário</h1>
+            <h2 class="text-headline-md font-headline-md text-white/90 mb-8 tracking-widest uppercase">Meu Grande Amor
+            </h2>
+            <p class="text-body-lg font-body-lg text-white/80 max-w-2xl mx-auto mb-10 italic">"Em cada detalhe seu,
+                encontro um motivo novo para me apaixonar todos os dias."</p>
+            <a class="inline-block bg-white text-primary px-10 py-4 rounded-full font-label-caps text-label-caps uppercase tracking-widest hover:bg-primary-container hover:text-primary transition-all duration-300 shadow-xl"
+                href="#mensagem">Começar nossa história</a>
+        </div>
+    </section>
+
+    <!-- Letter Section -->
+    <section class="py-section-gap px-margin-mobile bg-surface-container-low" id="mensagem">
+        <div class="max-w-3xl mx-auto">
+            <div
+                class="bg-white p-8 md:p-16 rounded-lg shadow-[0_4px_30px_rgba(74,69,67,0.04)] relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-2 bg-primary-container"></div>
+                <div class="letter-paper h-full w-full absolute inset-0 opacity-10 pointer-events-none"></div>
+                <div class="relative z-10">
+                    <span class="font-headline-sm text-headline-sm text-primary mb-8 block">Meu amor, minha
+                        princesa.</span>
+                    <div class="space-y-6 text-body-lg font-body-lg text-on-surface-variant leading-relaxed">
+                        <p>Neste novo ciclo, quero desejar o que você merece, toda a felicidade do mundo e as bençãos do
+                            nosso bom Deus, que claro, nos juntou como namorados, futuros noivos, casados e papais da
+                            Heleninha.</p>
+                        <p>O aniversário é seu, mas o presente de ter você em minha vida é todo meu, sou muito grato por
+                            ter
+                            você aqui. Minha menina, sempre comentamos sobre essa data e como envelhecemos
+                            juntos né? kkkk. Nem parece que uns dias atrás você estava com 16 anos me olhando na sala de
+                            aula
+                            toda apaixonada querendo me namorar rsrs.</p>
+                        <p>Espero que essa data se repita centenas de vezes e que eu esteja acompanhando toda sua
+                            evolução. Falando nela, reparar que esses anos você evoluiu tanto amor, é inspirador,
+                            ensino médio, faculdade, emprego novo e ainda conseguiu uma efetivação. Você é espetacular,
+                            eu te amo.</p>
+                        <p>Com carinho, seu amor.</p>
+                        <p></p>
+                    </div>
+                    <div class="mt-12 pt-8 border-t border-outline-variant italic text-right">
+                        <span class="text-headline-sm font-headline-sm text-primary">Breno</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reasons Section -->
+    <section class="py-section-gap px-margin-mobile">
+        <div class="max-w-container-max mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-label-caps font-label-caps text-secondary uppercase tracking-[0.3em] block mb-4">Por
+                    que você?</span>
+                <h2 class="text-headline-md font-headline-md text-primary">Razões Pelas Quais te Amo</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                <div
+                    class="p-10 bg-white border border-outline-variant/30 rounded-2xl text-center group hover:border-secondary transition-all duration-300">
+                    <span class="material-symbols-outlined text-4xl text-secondary mb-6 block"
+                        style="font-variation-settings: 'FILL' 1;">favorite</span>
+                    <h4 class="text-headline-sm font-headline-sm text-primary mb-4">Seu Jeito</h4>
+                    <p class="text-body-md text-on-surface-variant">A forma como você me conquistou e demonstra todo seu
+                        amor por mim.</p>
+                </div>
+                <div
+                    class="p-10 bg-white border border-outline-variant/30 rounded-2xl text-center group hover:border-secondary transition-all duration-300">
+                    <span class="material-symbols-outlined text-4xl text-secondary mb-6 block"
+                        style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+                    <h4 class="text-headline-sm font-headline-sm text-primary mb-4">Sua Força</h4>
+                    <p class="text-body-md text-on-surface-variant">Você é a mulher mais esforçada que já vi, e eu
+                        admiro muito isso.</p>
+                </div>
+                <div
+                    class="p-10 bg-white border border-outline-variant/30 rounded-2xl text-center group hover:border-secondary transition-all duration-300">
+                    <span class="material-symbols-outlined text-4xl text-secondary mb-6 block"
+                        style="font-variation-settings: 'FILL' 1;">compost</span>
+                    <h4 class="text-headline-sm font-headline-sm text-primary mb-4">Tudo que Há em Você</h4>
+                    <p class="text-body-md text-on-surface-variant">Eu amo tudo em você, minha alma gêmea.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Counter Section -->
+    <section class="py-section-gap px-margin-mobile bg-primary-container/30">
+        <div
+            class="max-w-4xl mx-auto bg-white p-12 md:p-20 rounded-3xl shadow-2xl text-center relative overflow-hidden">
+            <div class="absolute -top-12 -right-12 w-48 h-48 bg-secondary-fixed opacity-10 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-12 -left-12 w-48 h-48 bg-primary opacity-10 rounded-full blur-3xl"></div>
+            <span class="material-symbols-outlined text-6xl text-primary mb-8"
+                style="font-variation-settings: 'FILL' 1;">favorite</span>
+            <h2 class="text-headline-md font-headline-md text-primary mb-12">Nossa História em Números</h2>
+            <div class="grid grid-cols-3 gap-4 md:gap-12">
+                <div class="flex flex-col">
+                    <span class="text-display-lg-mobile md:text-display-lg font-display-lg text-primary"
+                        id="years-count">02</span>
+                    <span
+                        class="text-label-caps font-label-caps text-on-surface-variant uppercase tracking-widest">Anos</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-display-lg-mobile md:text-display-lg font-display-lg text-primary"
+                        id="months-count">2</span>
+                    <span
+                        class="text-label-caps font-label-caps text-on-surface-variant uppercase tracking-widest">Meses</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-display-lg-mobile md:text-display-lg font-display-lg text-primary"
+                        id="days-count">9</span>
+                    <span
+                        class="text-label-caps font-label-caps text-on-surface-variant uppercase tracking-widest">Dias</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Playlist Section -->
+    <section class="py-section-gap px-margin-mobile" id="playlist">
+        <div class="max-w-container-max mx-auto">
+            <div class="flex flex-col md:flex-row gap-gutter items-center">
+                <div class="w-full md:w-1/3">
+                    <div
+                        class="aspect-square bg-surface-container rounded-2xl shadow-inner flex items-center justify-center p-8 border border-outline-variant/20 relative overflow-hidden group">
+                        <div class="absolute inset-0 bg-cover bg-center blur-sm opacity-20 scale-110"
+                            style="background-image: url('./fotos/Breno_babs1.jpeg')">
+                        </div>
+                        <span class="material-symbols-outlined text-8xl text-primary/40">music_note</span>
+                        <div class="absolute bottom-6 left-6 right-6">
+                            <h4 class="text-headline-sm font-headline-sm text-primary mb-1">Sons que me lembram Você
+                            </h4>
+                            <p class="text-label-caps font-label-caps text-on-surface-variant uppercase">Músicas do meu
+                                amor </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-2/3 space-y-4">
+                    <h2 class="text-headline-md font-headline-md text-primary mb-8">Nossa Trilha Sonora</h2>
+                    <!-- Track 1 -->
+                    <div
+                        class="flex items-center justify-between p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+                        <div class="flex items-center gap-4">
+                            <a href="https://open.spotify.com/search/S%C3%B3%20me%20ligar%20BK" target="_blank"
+                                class="w-12 h-12 rounded overflow-hidden relative group block shrink-0">
+                                <img src="https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/3b/2e/21/3b2e21b4-57f7-f735-16b1-2a622626e3a0/8445162776523.jpg/100x100bb.jpg"
+                                    alt="Só me ligar - BK" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <span class="material-symbols-outlined text-white"
+                                        style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                                </div>
+                            </a>
+                            <div>
+                                <h5 class="font-bold text-on-surface">Só me ligar</h5>
+                                <p class="text-label-caps text-on-surface-variant uppercase text-[10px]">BK</p>
+                            </div>
+                        </div>
+                        <span class="text-label-caps text-outline">03:13</span>
+                    </div>
+                    <!-- Track 2 -->
+                    <div
+                        class="flex items-center justify-between p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+                        <div class="flex items-center gap-4">
+                            <a href="https://open.spotify.com/search/Caso%20Indefinido%20Cristiano%20Araujo"
+                                target="_blank" class="w-12 h-12 rounded overflow-hidden relative group block shrink-0">
+                                <img src="https://is1-ssl.mzstatic.com/image/thumb/Music3/v4/29/7d/48/297d4822-dc9b-3da3-f08c-97994a920c33/7891430371425.jpg/100x100bb.jpg"
+                                    alt="Caso Indefinido - Cristiano Araújo" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <span class="material-symbols-outlined text-white"
+                                        style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                                </div>
+                            </a>
+                            <div>
+                                <h5 class="font-bold text-on-surface">Caso Indefinido</h5>
+                                <p class="text-label-caps text-on-surface-variant uppercase text-[10px]">Cristiano
+                                    Araújo</p>
+                            </div>
+                        </div>
+                        <span class="text-label-caps text-outline">05:13</span>
+                    </div>
+                    <!-- Track 3 -->
+                    <div
+                        class="flex items-center justify-between p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+                        <div class="flex items-center gap-4">
+                            <a href="https://open.spotify.com/search/A%20Nossa%20Praia%20Matheus%20Kauan"
+                                target="_blank" class="w-12 h-12 rounded overflow-hidden relative group block shrink-0">
+                                <img src="https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b7/b9/31/b7b931c2-d7f1-dab6-963a-f98d9c663360/17UMGIM79462.rgb.jpg/100x100bb.jpg"
+                                    alt="A Nossa Praia - Matheus & Kauan" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <span class="material-symbols-outlined text-white"
+                                        style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                                </div>
+                            </a>
+                            <div>
+                                <h5 class="font-bold text-on-surface">A Nossa Praia</h5>
+                                <p class="text-label-caps text-on-surface-variant uppercase text-[10px]">Matheus & Kauan
+                                </p>
+                            </div>
+                        </div>
+                        <span class="text-label-caps text-outline">03:21</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Surprise Section -->
+    <section class="py-section-gap px-margin-mobile bg-white text-center" id="surpresa">
+        <div class="max-w-2xl mx-auto py-16 px-8 border-2 border-dashed border-primary-container rounded-[40px]">
+            <h2 class="text-headline-md font-headline-md text-primary mb-10">Eu tenho algo para você.</h2>
+            <button
+                class="reveal-btn relative inline-flex items-center justify-center px-12 py-6 overflow-hidden font-label-caps font-bold text-white transition-all duration-300 bg-primary rounded-full group hover:bg-secondary"
+                id="surprise-trigger">
+                <span class="relative">Clique para descobrir uma surpresa ❤️</span>
+            </button>
+            <div class="hidden mt-12 space-y-6 animate-fade-in" id="surprise-message">
+                <div class="text-6xl animate-bounce">🎁</div>
+                <h3 class="text-headline-md font-headline-md text-primary">Que tal comemorarmos juntinhos?</h3>
+                <p class="text-body-lg text-on-surface-variant">Preparei uma surpresa especial para nós. Mas preciso que
+                    me ajude a escolher onde passaremos esse momento tão especial lado a lado.</p>
+                <div class="pt-4 pb-2">
+                    <a href="https://www.airbnb.com.br/wishlists/2107489947/invite?share_token=94d3119c-c869-40c5-824b-da5df8263ef2"
+                        target="_blank"
+                        class="inline-block bg-primary text-white px-8 py-4 rounded-full font-label-caps text-label-caps uppercase tracking-widest hover:bg-secondary hover:text-white transition-all duration-300 shadow-lg">
+                        Ver Opções
+                    </a>
+                </div>
+                <div class="gold-divider w-1/2 mx-auto"></div>
+                <p class="text-label-caps font-bold text-secondary uppercase tracking-widest">Eu te amo muito mais do
+                    que possa imaginar.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+        class="bg-surface-container-lowest dark:bg-surface-container-high w-full py-section-gap flex flex-col items-center gap-unit text-center w-full px-margin-mobile">
+        <span class="text-headline-sm font-headline-sm text-primary">Os Anos Mais Felizes que um Homem Poderia
+            Viver</span>
+        <nav class="flex gap-gutter my-6">
+            <a class="text-on-surface-variant dark:text-outline hover:text-primary transition-colors text-label-caps font-label-caps uppercase"
+                href="#mensagem"></a>
+        </nav>
+        <p class="text-body-md font-body-md text-on-surface-variant dark:text-outline">Feito com muito amor por Breno
+        </p>
+    </footer>
+
+    <script>
+        // Floating Hearts Animation
+        function createHeart() {
+            const container = document.getElementById('heart-container');
+            if (!container) return;
+
+            const heart = document.createElement('span');
+            heart.classList.add('material-symbols-outlined', 'heart-float', 'text-primary-container');
+            heart.textContent = 'favorite';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            heart.style.fontSize = (Math.random() * 20 + 10) + 'px';
+            heart.style.fontVariationSettings = "'FILL' 1";
+
+            container.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+
+        setInterval(createHeart, 300);
+
+        // Surprise Button Logic
+        const surpriseBtn = document.getElementById('surprise-trigger');
+        const surpriseMsg = document.getElementById('surprise-message');
+
+        surpriseBtn.addEventListener('click', () => {
+            surpriseMsg.classList.remove('hidden');
+            surpriseBtn.classList.add('hidden');
+
+            // Celebration burst
+            for (let i = 0; i < 30; i++) {
+                setTimeout(createHeart, i * 50);
+            }
+        });
+
+        // Simple smooth scroll reveal logic
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+
+        // Initial counts for the counter
+        let startDate = new Date('2024-04-24');
+        let now = new Date();
+
+        let years = now.getFullYear() - startDate.getFullYear();
+        let months = now.getMonth() - startDate.getMonth();
+        let days = now.getDate() - startDate.getDate();
+
+        if (days < 0) {
+            let prevMonth = new Date(now.getFullYear(), now.getMonth(), 0).getDate();
+            days += prevMonth;
+            months--;
+        }
+
+        if (months < 0) {
+            months += 12;
+            years--;
+        }
+
+        document.getElementById('years-count').textContent = years.toString().padStart(2, '0');
+        document.getElementById('months-count').textContent = months.toString().padStart(2, '0');
+        document.getElementById('days-count').textContent = days.toString().padStart(2, '0');
+    </script>
+</body>
+
+</html>
